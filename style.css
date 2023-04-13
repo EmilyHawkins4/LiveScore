@@ -1,7 +1,9 @@
-/* css file: creates the layout/format of html to style the page (colors/spacing/fonts/alignment) */
-/* css tutorial: https://www.youtube.com/watch?v=Z4pCqK-V_Wo&t=386s */
-/* don't have to understand everything just mess around with changing colors/fonts/alignment */
 
-body {
-    background-color: blue;
+#heading {
+    text-align: center;
+    padding: 20px;
+}
+
+#content {
+    margin: 1.5rem;
 }

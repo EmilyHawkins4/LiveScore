@@ -1,18 +1,26 @@
-<!-- html file: adds content to the page (text/images/links/videos/etc...) -->
-<!-- html tutorial: https://www.youtube.com/watch?v=salY_Sm6mv4 -->
-<!-- don't have to understand everything just mess around with different types of tags -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- don't need to understand most of the stuff in the head section just focus on the body -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="script.js"></script>
-    <title>Document</title>
+    <script type='text/javascript' src='config.js'></script>
+    <link rel="icon" type="image/x-icon" href="data:image/png;base64,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">
+    <title>MLB Live Scores</title>
 </head>
-<body>
-    <h1>This is a website</h1>
+<body class="bg-neutral-50">
+    <div id="heading">
+        <h1 class ="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">MLB Live Scores</h1>
+    </div>
+    <div id="content" class = "grid grid-cols-3 gap-5 content-around">
+
+    </div>
+    <div id="footer" class=" text-center dark:bg-neutral-700 lg:text-left">
+        <h2 class="p-4 text-center font-bold">Copyright &copy; 2023</h2>
+    </div>
 </body>
 </html>
