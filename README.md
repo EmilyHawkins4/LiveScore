@@ -2,7 +2,7 @@
 <!-- don't need to edit until completed with entire project -->
 # MLB Live Score 
 
-## Emily Hawkins
+**Emily Hawkins**
 April 2023
 
 ## Technologies
